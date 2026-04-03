@@ -1,0 +1,36 @@
+# Данные
+/data/raw/
+/data/interim/
+/data/processed/
+
+# Различные конфигурации
+.env
+
+# Виртуальные окружения Python
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.idea/
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints
+
+# Логи и артефакты обучений
+/logs/
+/wandb/
+/tb_logs/
+*.pth
+*.pt
+*.onnx
+
+# dvc
+/data/**/*.dvc
+.dvc/config.local
+.dvc/cache
+.dvc/tmp
