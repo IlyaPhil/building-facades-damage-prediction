@@ -1,0 +1,11 @@
+defaults:
+  - _self_
+  - model: 
+  - data: default
+  - training: default
+
+# Глобальные настройки
+project_name: facade-damage-segmentation
+experiment_name: baseline
+seed: 42
+mlflow_uri: http://127.0.0.1:8080

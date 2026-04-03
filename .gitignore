@@ -2,6 +2,10 @@
 /data/raw/
 /data/interim/
 /data/processed/
+/literature-analysis
+
+# Модели
+models/
 
 # Различные конфигурации
 .env
@@ -34,3 +38,6 @@ __pycache__/
 .dvc/config.local
 .dvc/cache
 .dvc/tmp
+
+# Прочее
+pictures_temp/
