@@ -1,0 +1,417 @@
+\documentclass[14pt]{extarticle}
+
+%% Поля: левое 2 см, правое 1 см, верхнее 2 см, нижнее 2 см (требование ВШЭ)
+\usepackage[left=2cm, right=1cm, top=2cm, bottom=2cm]{geometry}
+
+%% Кодировка и язык
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian, english]{babel}
+
+%% Шрифт Times New Roman (tempora — кириллический клон Times)
+\usepackage{tempora}
+
+%% Межстрочный интервал 1.5 (требование ВШЭ)
+\usepackage{setspace}
+\onehalfspacing
+
+%% Абзацный отступ 1.25 см (требование ВШЭ)
+\usepackage{indentfirst}
+\setlength{\parindent}{1.25cm}
+
+%% Нумерация страниц — внизу по центру (требование ВШЭ)
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[C]{\thepage}
+    \renewcommand{\headrulewidth}{0pt}
+}
+
+%% Математика
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{siunitx}
+\usepackage{cases}
+
+%% Графика и таблицы
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\renewcommand\thesubfigure{\asbuk{subfigure}}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{dcolumn}
+
+%% Алгоритмы
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\SetAlgorithmName{Алгоритм}{алгоритм}{Список алгоритмов}
+
+%% Код Python
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codebg}{HTML}{F7F7F7}
+\definecolor{codegreen}{HTML}{2E7D32}
+\definecolor{codeblue}{HTML}{1565C0}
+\definecolor{codegray}{HTML}{757575}
+
+\lstdefinestyle{python}{
+    language=Python,
+    backgroundcolor=\color{codebg},
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{codeblue}\bfseries,
+    stringstyle=\color{codegreen},
+    commentstyle=\color{codegray}\itshape,
+    numberstyle=\tiny\color{codegray},
+    breaklines=true,
+    captionpos=b,
+    numbers=left,
+    numbersep=8pt,
+    showstringspaces=false,
+    tabsize=4,
+    frame=single,
+    framerule=0.4pt,
+    rulecolor=\color{codegray!40},
+    xleftmargin=15pt,
+}
+\lstset{style=python}
+
+%% Прочее оформление
+\usepackage{enumitem}
+\usepackage{hyphenat}
+\hyphenation{ма-те-ма-ти-ка вос-ста-нав-ли-вать се-ман-ти-чес-кая сег-мен-та-ция}
+\setlength{\emergencystretch}{30pt}
+
+%% Гиперссылки
+\usepackage{hyperref}
+\definecolor{linkcolor}{HTML}{0000D5}
+\hypersetup{
+    pdfstartview=FitH,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor,
+    citecolor=linkcolor,
+    colorlinks=true,
+    pdftitle={Оценка риска повреждения фасадов зданий},
+    pdfauthor={Фамилия Имя Отчество},
+}
+
+%% Библиография
+\bibliographystyle{IEEEtran}
+
+\newcommand{\miou}{mIoU\xspace}
+
+% ---------------------------------------------------------------
+\begin{document}
+
+%% ===== ТИТУЛЬНЫЙ ЛИСТ (без нумерации) =====
+\begin{titlepage}
+    \newgeometry{left=1.5cm, right=1.5cm, top=2cm, bottom=2cm}
+    \thispagestyle{empty}
+    \begin{center}
+        {\normalsize ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ\\
+        ВЫСШЕГО ОБРАЗОВАНИЯ}\\
+        \vspace{0.2cm}
+        {\normalsize «НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ УНИВЕРСИТЕТ\\
+        «ВЫСШАЯ ШКОЛА ЭКОНОМИКИ»»}\\
+        \vspace{1cm}
+        {\normalsize Факультет компьютерных наук}\\
+        \vspace{1.5cm}
+
+        {\normalsize Фамилия Имя Отчество}\\
+        \vspace{0.2cm}
+        {\normalsize\textbf{Оценка риска повреждения фасадов городских зданий\\
+        на основе семантической сегментации и графовых нейронных сетей}}\\
+        \vspace{0.2cm}
+        {\normalsize Выпускная квалификационная работа}\\
+        {\normalsize по направлению подготовки 09.04.04 «Программная инженерия»}\\
+        {\normalsize образовательная программа «Искусственный интеллект»}\\
+    \end{center}
+
+    \vspace{4cm}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \begin{flushleft}
+            {\normalsize Научный руководитель}\\
+            {\normalsize должность, учёная степень}\\
+            {\normalsize Фамилия И.\,О.}\\
+        \end{flushleft}
+    \end{minipage}
+
+    \vspace{4cm}
+    \begin{center}
+        Санкт-Петербург 2025
+    \end{center}
+    \restoregeometry
+\end{titlepage}
+
+%% ===== АННОТАЦИЯ (800–2000 знаков) =====
+\section*{Аннотация}
+\addcontentsline{toc}{section}{Аннотация}
+
+Данная работа посвящена разработке автоматизированного конвейера оценки риска повреждения
+фасадов городских зданий по данным уличных панорам. Объектом исследования являются
+фасады жилых зданий Санкт-Петербурга. Предлагаемый подход объединяет три этапа:
+(1)~семантическую сегментацию дефектов на основе трансформерной архитектуры SegFormer-B2,
+(2)~ранжирование зданий по степени повреждённости с помощью модели попарных предпочтений
+RankNet, (3)~построение графа зданий и обучение графовой нейронной сети (GNN) для итоговой
+оценки риска. Набор данных сформирован из панорамных снимков Яндекс.Панорам и включает
+три суперкласса дефектов: антропогенные (граффити), биохимические (плесень, высолы) и
+механические (трещины). Дополнительно используется набор профессиональных DSLR-фотографий
+для оценки межсъёмочной обобщаемости модели. Базовая модель сегментации достигает
+mIoU~=~0,595. Работа содержит [NN]~страниц, [NN]~рисунков, [NN]~таблиц,
+[NN]~использованных источников.
+
+\vspace{0.5em}
+\noindent\textbf{Ключевые слова:} семантическая сегментация, графовые нейронные сети,
+оценка технического состояния зданий, SegFormer, RankNet, компьютерное зрение,
+Яндекс.Панорамы.
+
+\newpage
+
+%% ===== ANNOTATION =====
+\section*{Annotation}
+\addcontentsline{toc}{section}{Annotation}
+
+This work presents an automated pipeline for assessing facade damage risk in urban buildings
+using street-level panoramic imagery. The proposed approach combines three stages:
+(1)~semantic segmentation of defects using the SegFormer-B2 transformer architecture,
+(2)~building-level damage ranking via the RankNet pairwise preference model, and
+(3)~a building graph construction with a Graph Neural Network (GNN) for final risk scoring.
+The dataset is collected from Yandex Panoramas and annotated with three defect superclasses:
+anthropological (graffiti), biochemical (mold, efflorescence), and mechanical (cracks).
+An additional set of professional DSLR photographs is used to evaluate cross-domain
+generalization. The baseline segmentation model achieves mIoU~=~0.595. The work contains
+[NN]~pages, [NN]~figures, [NN]~tables, [NN]~references.
+
+\vspace{0.5em}
+\noindent\textbf{Keywords:} semantic segmentation, graph neural networks, building condition
+assessment, SegFormer, RankNet, computer vision, Yandex Panoramas.
+
+\newpage
+
+%% ===== СОДЕРЖАНИЕ =====
+\tableofcontents
+\newpage
+
+% ---------------------------------------------------------------
+%% ===== ВВЕДЕНИЕ (не более 10% объёма ВКР) =====
+% ---------------------------------------------------------------
+\section*{Введение}
+\addcontentsline{toc}{section}{Введение}
+\label{sec:intro}
+
+Мониторинг технического состояния зданий является важной задачей городского управления.
+Регулярные обследования фасадов позволяют своевременно выявлять дефекты и предотвращать
+аварийные ситуации. Ручной осмотр трудоёмок, дорогостоящ и не поддаётся масштабированию
+на уровень города.
+
+\textbf{Актуальность.} ...
+
+\textbf{Научная новизна.} ...
+
+\textbf{Цель работы} --- разработать автоматизированный конвейер оценки риска повреждения
+фасадов городских зданий по данным уличных панорам.
+
+\noindent\textbf{Задачи:}
+\begin{enumerate}[leftmargin=*, label=\arabic*.]
+    \item Сформировать набор данных панорамных снимков фасадов зданий с разметкой
+          трёх классов дефектов.
+    \item Обучить модель семантической сегментации дефектов (SegFormer-B2).
+    \item Построить датасет попарных сравнений зданий и обучить модель ранжирования (RankNet).
+    \item Построить граф зданий и обучить графовую нейронную сеть (GNN) для оценки риска.
+    \item Оценить качество каждого этапа конвейера и провести анализ ошибок.
+\end{enumerate}
+
+\noindent\textbf{Объект исследования} --- фасады жилых зданий Санкт-Петербурга.
+
+\noindent\textbf{Методы исследования} --- глубокое обучение, семантическая сегментация,
+обучение ранжированию, графовые нейронные сети.
+
+В главе~1 приводится обзор смежных работ и формулируется постановка задачи.
+Глава~2 описывает набор данных, предложенную архитектуру и методы обучения.
+В главе~3 представлены результаты экспериментов и рекомендации по применению.
+
+\newpage
+
+% ---------------------------------------------------------------
+%% ===== ГЛАВА 1. Обзор литературы и постановка задачи =====
+% ---------------------------------------------------------------
+\section{Обзор литературы и постановка задачи}
+\label{sec:review}
+
+\subsection{Автоматизированная диагностика дефектов зданий}
+
+\subsection{Семантическая сегментация в задачах строительного контроля}
+
+\subsection{Ранжирование объектов в задачах оценки состояния}
+
+\subsection{Графовые нейронные сети для городских данных}
+
+\subsection{Постановка задачи}
+
+\subsection{Выводы по главе 1}
+% Требование ВШЭ: 2–5 пунктов
+\begin{enumerate}[leftmargin=*, label=\arabic*.]
+    \item ...
+    \item ...
+    \item ...
+\end{enumerate}
+
+\newpage
+
+% ---------------------------------------------------------------
+%% ===== ГЛАВА 2. Данные и предлагаемый метод =====
+% ---------------------------------------------------------------
+\section{Данные и предлагаемый метод}
+\label{sec:method}
+
+\subsection{Набор данных}
+
+\subsubsection{Источники данных}
+
+Набор данных сформирован из двух источников:
+\begin{enumerate}[leftmargin=*, label=\arabic*.]
+    \item \textbf{Яндекс.Панорамы} --- скриншоты фасадов $\approx71$~здания,
+          нарезанные на патчи $800{\times}800$ пикселей ($\approx206$~патчей).
+    \item \textbf{DSLR-фотографии} --- $\approx500$~профессиональных снимков зданий
+          в районе станции метро «Технологический институт», используемые как
+          тест-сет для оценки доменной обобщаемости.
+\end{enumerate}
+
+\subsubsection{Классы дефектов}
+
+В работе выделяются три суперкласса дефектов:
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Антропогенные} (Anthropological, A) --- граффити, следы вандализма.
+    \item \textbf{Биохимические} (Bio-chemical, B) --- плесень, высолы, биологические
+          отложения.
+    \item \textbf{Механические} (Mechanical, M) --- трещины, сколы, разрушение материала.
+\end{itemize}
+
+\subsubsection{Разметка}
+
+Разметка выполнена в системе CVAT с применением автоматической предразметки
+SAM2~\cite{kirillov2023sam}.
+
+\subsection{Семантическая сегментация (SegFormer-B2)}
+
+SegFormer~\cite{xie2021segformer} --- трансформерная архитектура для семантической
+сегментации, состоящая из иерархического энкодера Mix Transformer (MiT-B2) и лёгкого
+MLP-декодера.
+
+Для борьбы с дисбалансом классов применяется взвешенная кросс-энтропия:
+\begin{equation}
+    \mathcal{L} = -\sum_{c} w_c \sum_{i} y_{ic} \log \hat{p}_{ic},
+    \label{eq:loss}
+\end{equation}
+где $w_c$ --- вес класса $c$, $y_{ic}$ --- истинная метка пикселя $i$,
+$\hat{p}_{ic}$ --- предсказанная вероятность.
+
+\subsection{Ранжирование зданий (RankNet)}
+
+\subsection{Граф зданий и GNN}
+
+\subsection{Выводы по главе 2}
+% Требование ВШЭ: 3–5 пунктов, элементы научной новизны
+\begin{enumerate}[leftmargin=*, label=\arabic*.]
+    \item ...
+    \item ...
+    \item ...
+\end{enumerate}
+
+\newpage
+
+% ---------------------------------------------------------------
+%% ===== ГЛАВА 3. Результаты и рекомендации по применению =====
+% ---------------------------------------------------------------
+\section{Результаты и рекомендации по применению}
+\label{sec:results}
+
+\subsection{Условия проведения экспериментов}
+
+\subsection{Метрики качества}
+
+Основной метрикой сегментации является mean Intersection over Union (\miou):
+\begin{equation}
+    \text{mIoU} = \frac{1}{C} \sum_{c=1}^{C}
+    \frac{TP_c}{TP_c + FP_c + FN_c},
+    \label{eq:miou}
+\end{equation}
+где $C$ --- число классов, $TP_c$, $FP_c$, $FN_c$ --- истинно-положительные,
+ложно-положительные и ложно-отрицательные предсказания для класса $c$.
+
+\subsection{Результаты сегментации}
+
+Базовая модель SegFormer-B2 достигает \miou~$= 0{,}595$ на валидационной
+выборке (табл.~\ref{tab:seg_results}).
+
+\begin{table}[H]
+    \centering
+    \caption{Результаты семантической сегментации по классам.}
+    \label{tab:seg_results}
+    \begin{tabular}{lccc}
+        \toprule
+        \textbf{Класс} & \textbf{IoU} & \textbf{Precision} & \textbf{Recall} \\
+        \midrule
+        Антропогенные  & 0{,}66 & --- & 0{,}98 \\
+        Биохимические  & 0{,}45 & --- & ---    \\
+        Механические   & 0{,}46 & --- & 0{,}57 \\
+        \midrule
+        \textbf{mIoU}  & \textbf{0{,}595} & & \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Анализ ошибок}
+
+\subsection{Результаты ранжирования}
+
+\subsection{Результаты GNN}
+
+\subsection{Рекомендации по применению}
+
+\newpage
+
+% ---------------------------------------------------------------
+%% ===== ЗАКЛЮЧЕНИЕ (5–7 пунктов) =====
+% ---------------------------------------------------------------
+\section*{Заключение}
+\addcontentsline{toc}{section}{Заключение}
+
+\begin{enumerate}[leftmargin=*, label=\arabic*.]
+    \item ...
+    \item ...
+    \item ...
+    \item ...
+    \item ...
+\end{enumerate}
+
+\newpage
+
+% ---------------------------------------------------------------
+%% Перечень сокращений (опционально, раскомментировать при необходимости)
+% ---------------------------------------------------------------
+%\section*{Перечень сокращений}
+%\addcontentsline{toc}{section}{Перечень сокращений}
+%\begin{tabular}{ll}
+%    GNN       & Graph Neural Network (графовая нейронная сеть) \\
+%    mIoU      & mean Intersection over Union                   \\
+%    SegFormer & Segmentation Transformer                       \\
+%    RankNet   & Ranking Neural Network                         \\
+%\end{tabular}
+%\newpage
+
+% ---------------------------------------------------------------
+%% ===== СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ =====
+% ---------------------------------------------------------------
+\addcontentsline{toc}{section}{Список использованных источников}
+\bibliography{bib}
+
+\end{document}
