@@ -21,10 +21,10 @@ uv sync
 source .venv/bin/activate
 ```
 
-Для версионирования и загрузки данных используется DVC (удаленное хранилище настроено на S3):
+Для версионирования и загрузки данных используется DVC (удаленное хранилище в дальнейшем будет настроено на S3):
 
 ```bash
 dvc pull
 ```
 
-Обучение моделей поддерживается с интеграцией wandb.
+Логирование процесса обучения моделей производится в [wandb](https://wandb.ai/rimedheart-personal-use/facade-damage-segformer/workspace?nw=nwuserrimedheart).
