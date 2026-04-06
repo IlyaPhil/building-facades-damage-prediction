@@ -1,8 +1,8 @@
 from playwright.sync_api import sync_playwright
-import geopandas as gpd
+import pandas as pd
 from pathlib import Path
 
-def screenshot_with_playwright(geojson_path, width=1920, height=1080):
+def screenshot_with_playwright(json_path, width=1920, height=1080):
     """
     Downloads screenshots from Yandex Panorama URLs found in the GeoJSON file.
     Expected GeoJSON properties:
@@ -11,11 +11,11 @@ def screenshot_with_playwright(geojson_path, width=1920, height=1080):
     - screenshot_saved: Boolean flag
     """
     # Check if file exists
-    if not Path(geojson_path).exists():
-        print(f"File not found: {geojson_path}")
+    if not Path(json_path).exists():
+        print(f"File not found: {json_path}")
         return
 
-    buildings = gpd.read_file(geojson_path)
+    buildings = pd.read_json(json_path)
     
     # Ensure screenshot_saved column exists
     if 'screenshot_saved' not in buildings.columns:
@@ -24,7 +24,7 @@ def screenshot_with_playwright(geojson_path, width=1920, height=1080):
     output_dir = Path('screenshots')
     output_dir.mkdir(exist_ok=True)
     
-    print(f"Loaded {len(buildings)} buildings from {geojson_path}")
+    print(f"Loaded {len(buildings)} buildings from {json_path}")
     
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)
@@ -36,7 +36,7 @@ def screenshot_with_playwright(geojson_path, width=1920, height=1080):
             if row.get('screenshot_saved'):
                 continue
             
-            building_id = row.get('id')
+            building_id = row.get('building_id')
             panorama_url = row.get('panorama_url')
             
             if not panorama_url or not building_id:
@@ -73,8 +73,8 @@ def screenshot_with_playwright(geojson_path, width=1920, height=1080):
         
         browser.close()
     
-    buildings.to_file(geojson_path, driver='GeoJSON')
-    print("Updated GeoJSON saved.")
+    buildings.to_json(json_path, orient='records', force_ascii=False, indent=4)
+    print("Updated JSON saved.")
 
 # Установка Playwright
 # pip install playwright
@@ -84,16 +84,16 @@ def screenshot_with_playwright(geojson_path, width=1920, height=1080):
 # Запуск
 if __name__ == '__main__':
     # Update this path to your actual GeoJSON file
-    geo_file = 'master-thesis/damage-analysis/data/geodata/spb_buildings_2026-02-21_part2.geojson' 
+    geo_file = 'data/interim/yandex_panoramas_for_inference.json' 
     
     print(f"Starting downloader for {geo_file}...")
     screenshot_with_playwright(
-        geojson_path=geo_file,
+        json_path=geo_file,
         width=1920,
         height=1080
     )
 
-# python master-thesis/damage-analysis/src/utils/download_screenshots.py
+# python3 src/data/download_screenshots.py
 
 # Убрать мини-карту при создании скриншота вручную
 # Ввести в консоль в браузере

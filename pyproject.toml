@@ -25,3 +25,13 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src"]
+
+[dependency-groups]
+dev = [
+    "ipywidgets>=8.1.8",
+    "matplotlib>=3.10.8",
+    "pandas>=2.3.3",
+    "pillow>=12.1.1",
+    "playwright>=1.58.0",
+    "seaborn>=0.13.2",
+]

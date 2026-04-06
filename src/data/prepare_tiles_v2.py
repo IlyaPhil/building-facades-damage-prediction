@@ -5,7 +5,7 @@ from tqdm import tqdm
 from pathlib import Path
 
 # Папка с широкими планами (исходниками для инференса)
-INPUT_DIR = Path("data/raw/inference_test")
+INPUT_DIR = Path("data/processed/inference_test")
 if not INPUT_DIR.exists():
     print(f"Внимание: папка {INPUT_DIR} не найдена. Создаю пустую.")
     INPUT_DIR.mkdir(parents=True, exist_ok=True)
