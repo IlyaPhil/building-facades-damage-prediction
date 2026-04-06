@@ -1,6 +1,6 @@
 # Данные
 /data/raw/
-/data/interim/
+#/data/interim/
 /data/processed/
 /literature-analysis
 
@@ -45,4 +45,3 @@ master-thesis-text/
 # Прочее
 pictures_temp/
 archive/
-data/literature-analysis
