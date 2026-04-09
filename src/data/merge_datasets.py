@@ -9,10 +9,10 @@ from tqdm import tqdm
 # Пути к исходным данным
 BASE_DIR = Path("/home/neuralist/HSE_AI_master/master-thesis/building-facades-damage-prediction")
 DS1_RAW = BASE_DIR / "data/raw/screenshots_206_imgs"
-DS1_MASKS = BASE_DIR / "data/processed/cvat_2026_03_18_18_24_25_segmentation mask 1.1/SegmentationClass"
+DS1_MASKS = BASE_DIR / "data/raw/facade-damage-seg-206-imgs-v2/SegmentationClass"
 
 DS2_RAW = BASE_DIR / "data/raw/facades_2022_cvat_101_imgs"
-DS2_MASKS = BASE_DIR / "data/processed/cvat_2026_03_26_21_00_19_segmentation mask 1.1/SegmentationClass"
+DS2_MASKS = BASE_DIR / "data/raw/facade-damage-seg-101-imgs-v2/SegmentationClass"
 
 # Путь для сохранения объединенного датасета
 OUT_DIR = BASE_DIR / "data/processed/unified_dataset"

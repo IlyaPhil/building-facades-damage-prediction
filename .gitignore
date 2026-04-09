@@ -40,7 +40,9 @@ __pycache__/
 .dvc/tmp
 
 # Текст ВКР
-master-thesis-text/
+master-thesis-text/*.pdf
+master-thesis-text/*.png
+master-thesis-text/*.md
 
 # Прочее
 pictures_temp/

@@ -1,0 +1,111 @@
+<style>
+.hw{padding:0 0 1rem}
+h2{font-size:16px;font-weight:500;margin:0 0 3px;color:var(--color-text-primary)}
+.src{font-size:12px;color:var(--color-text-tertiary);margin:0 0 14px}
+.lgnd{display:flex;flex-wrap:wrap;gap:12px 20px;margin-bottom:14px}
+.li{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--color-text-secondary)}
+.dot{width:10px;height:10px;border-radius:2px;flex-shrink:0}
+table{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed}
+col.c0{width:136px}col.c1{width:176px}col.c2{width:176px}col.c3{width:auto}
+th{font-size:11px;font-weight:500;color:var(--color-text-secondary);padding:8px 6px 7px;text-align:left;border-bottom:1px solid var(--color-border-secondary);cursor:pointer;user-select:none;white-space:nowrap}
+th:hover{color:var(--color-text-primary)}
+th.asc::after{content:' ↑'}th.desc::after{content:' ↓'}
+td{padding:5px 6px;border-bottom:0.5px solid var(--color-border-tertiary);vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:var(--color-background-secondary)}
+.cn{font-size:13px;color:var(--color-text-primary);white-space:nowrap}
+.hl .cn{font-weight:500}
+.bc{display:flex;align-items:center;gap:5px}
+.bar{height:10px;border-radius:2px;min-width:1px;flex-shrink:0;transition:width .3s}
+.v{font-size:12px;color:var(--color-text-secondary);white-space:nowrap}
+.nd{font-size:12px;color:var(--color-text-tertiary)}
+.fn{font-size:11px;color:var(--color-text-tertiary);margin-top:10px;line-height:1.6;border-top:0.5px solid var(--color-border-tertiary);padding-top:8px}
+.pips{display:flex;gap:3px;margin-left:4px}
+.pip{width:5px;height:5px;border-radius:50%}
+</style>
+<div class="hw">
+  <h2>Дореволюционная застройка в крупных городах России</h2>
+  <p class="src">Источник: Кон-Тики / kontikimaps.ru — анализ данных OpenStreetMap, здания, построенные до 1917 г.</p>
+  <div class="lgnd">
+    <span class="li"><span class="dot" style="background:#D85A30"></span>Площадь застройки, млн м²</span>
+    <span class="li"><span class="dot" style="background:#1D9E75"></span>Доля в жилом фонде, %</span>
+    <span class="li"><span class="dot" style="background:#378ADD"></span>Сохранившаяся историческая среда, зданий</span>
+  </div>
+  <table>
+    <colgroup><col class="c0"><col class="c1"><col class="c2"><col class="c3"></colgroup>
+    <thead>
+      <tr>
+        <th onclick="srt(0)">Город</th>
+        <th onclick="srt(1)">Площадь, млн м²</th>
+        <th onclick="srt(2)">Доля, %</th>
+        <th onclick="srt(3)">Ист. среда, зд.</th>
+      </tr>
+    </thead>
+    <tbody id="tb"></tbody>
+  </table>
+  <p class="fn">
+    <b>Площадь</b> — суммарная площадь оснований всех дореволюционных построек в городе.&ensp;
+    <b>Доля</b> — от общей площади жилого фонда, построенного до 2019 г.&ensp;
+    <b>Историческая среда</b> — количество зданий, в радиусе 100 м от которых не менее 75% площади основания построек возведено до 1917 г.&ensp;
+    ** По Калининграду учтены здания, уцелевшие с довоенного Кёнигсберга.&ensp;
+    «—» — город не попал в топ-8/9 по данному показателю.
+  </p>
+</div>
+<script>
+const D=[
+  {c:'Санкт-Петербург', a:46,   s:17,   e:11000, hl:true,  n:''},
+  {c:'Москва',          a:21,   s:null, e:4500,  hl:false, n:''},
+  {c:'Нижний Новгород', a:2.5,  s:null, e:900,   hl:false, n:''},
+  {c:'Самара',          a:2.3,  s:null, e:600,   hl:false, n:''},
+  {c:'Ростов-на-Дону',  a:2.0,  s:4,    e:null,  hl:false, n:''},
+  {c:'Астрахань',       a:1.9,  s:8,    e:500,   hl:false, n:''},
+  {c:'Саратов',         a:1.7,  s:4,    e:null,  hl:false, n:''},
+  {c:'Казань',          a:1.7,  s:null, e:400,   hl:false, n:''},
+  {c:'Калининград',     a:null, s:6,    e:400,   hl:false, n:'**'},
+  {c:'Владикавказ',     a:null, s:8,    e:null,  hl:false, n:''},
+  {c:'Томск',           a:null, s:5,    e:null,  hl:false, n:''},
+  {c:'Таганрог',        a:null, s:5,    e:null,  hl:false, n:''},
+  {c:'Кострома',        a:null, s:5,    e:null,  hl:false, n:''},
+];
+const MA=46,MS=17,ME=11000,BW=110;
+function bar(v,mx,col){
+  if(v===null)return'<span class="nd">—</span>';
+  const w=Math.max(2,Math.round(v/mx*BW));
+  const lbl=v>=1?v.toLocaleString('ru'):v;
+  return`<div class="bc"><div class="bar" style="width:${w}px;background:${col}"></div><span class="v">${lbl}</span></div>`;
+}
+function pips(r){
+  const cols=['#D85A30','#1D9E75','#378ADD'];
+  const vals=[r.a,r.s,r.e];
+  return'<span class="pips">'+cols.map((c,i)=>`<span class="pip" style="background:${vals[i]!==null?c:'var(--color-border-tertiary)'}"></span>`).join('')+'</span>';
+}
+let sc=-1,sa=true;
+function srt(col){
+  const ths=document.querySelectorAll('th');
+  ths.forEach((t,i)=>{t.classList.remove('asc','desc');if(i===col)t.classList.add(sa||sc!==col?'desc':'asc')});
+  if(sc===col)sa=!sa;else{sc=col;sa=false;}
+  render();
+}
+function render(){
+  let rows=[...D];
+  if(sc>=0){
+    rows.sort((a,b)=>{
+      let va,vb;
+      if(sc===0){return sa?a.c.localeCompare(b.c,'ru'):b.c.localeCompare(a.c,'ru');}
+      if(sc===1){va=a.a??-1;vb=b.a??-1;}
+      if(sc===2){va=a.s??-1;vb=b.s??-1;}
+      if(sc===3){va=a.e??-1;vb=b.e??-1;}
+      return sa?va-vb:vb-va;
+    });
+  }
+  document.getElementById('tb').innerHTML=rows.map(r=>`<tr class="${r.hl?'hl':''}">
+    <td><span class="cn">${r.c}${r.n?`<sup style="font-size:9px;color:var(--color-text-tertiary)">${r.n}</sup>`:''}${pips(r)}</span></td>
+    <td>${bar(r.a,MA,'#D85A30')}</td>
+    <td>${bar(r.s,MS,'#1D9E75')}</td>
+    <td>${bar(r.e,ME,'#378ADD')}</td>
+  </tr>`).join('');
+}
+render();
+document.querySelectorAll('th').forEach((t,i)=>{if(i===1){t.classList.add('desc');}});
+sc=1;sa=false;render();
+</script>

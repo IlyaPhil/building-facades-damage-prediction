@@ -1,0 +1,202 @@
+\begin{thebibliography}{10}
+
+\bibitem{gosprog2025}
+{Государственная программа «Сохранение
+  объектов культурного наследия народов
+  Российской Федерации» на период 2025--2045
+  годов}, 2024.
+\newblock Правительство Российской Федерации.
+
+\bibitem{fz73}
+{Федеральный закон № 73-ФЗ «Об объектах
+  культурного наследия (памятниках истории
+  и культуры) народов Российской
+  Федерации»}, 2002.
+\newblock Принят Государственной Думой 24 мая
+  2002~г.
+
+\bibitem{gost31937}
+{ГОСТ 31937-2024. Здания и сооружения. Правила
+  обследования и мониторинга технического
+  состояния}, 2024.
+
+\bibitem{gost55567}
+{ГОСТ Р 55567-2013. Порядок организации и
+  ведения инженерно-технических
+  исследований на объектах культурного
+  наследия. Памятники истории и культуры.
+  Общие требования}, 2013.
+
+\bibitem{vsn5386}
+{ВСН 53-86(р). Правила оценки физического
+  износа жилых зданий}, 1988.
+
+\bibitem{vsn5888}
+{ВСН 58-88(р). Положение об организации и
+  проведении реконструкции, ремонта и
+  технического обслуживания зданий}, 1989.
+
+\bibitem{sp13102}
+{СП 13-102-2003. Правила обследования несущих
+  строительных конструкций зданий и
+  сооружений}, 2003.
+
+\bibitem{srp2007}
+{Свод реставрационных правил СРП-2007.
+  Рекомендации по проведению
+  научно-исследовательских,
+  изыскательских, проектных и
+  производственных работ, направленных на
+  сохранение объектов культурного наследия
+  народов Российской Федерации}, 2007.
+
+\bibitem{chistyakov2014}
+А.Н. Чистяков and М.Э. Крогиус.
+\newblock {\em {Типология разрушений памятников
+  культуры}}.
+\newblock СПбКО, Санкт-Петербург, 2014.
+
+\bibitem{kontikimaps}
+Рейтинг городов России с сохранившейся
+  исторической городской застройкой.
+\newblock \url{https://kontikimaps.ru/}, 2022.
+\newblock Дата обращения: 2025.
+
+\bibitem{spblaw820}
+{Закон Санкт-Петербурга от 19.01.2009 № 820-7 «О
+  границах объединённых зон охраны
+  объектов культурного наследия,
+  расположенных на территории
+  Санкт-Петербурга, режимах использования
+  земель и требованиях к градостроительным
+  регламентам в границах указанных зон»},
+  2009.
+
+\bibitem{mokhireva2019}
+А.О. Мохирева, Е.А. Глебова, П.В. Логинова, Л.Г.
+  Назинян, and Н.А. Тихонович.
+\newblock {Качественная оценка стоимости
+  ремонта исторических зданий при
+  использовании систем
+  автоматизированного мониторинга}.
+\newblock {\em Строительство уникальных зданий и
+  сооружений}, (2 (77)):7--22, 2019.
+
+\bibitem{medyanik2018}
+Ю.В. Медяник.
+\newblock {Классификация и анализ дефектов и
+  повреждений штукатурных покрытий фасадов
+  зданий}.
+\newblock {\em Известия Казанского
+  государственного
+  архитектурно-строительного
+  университета}, (2 (44)):231--238, 2018.
+
+\bibitem{alfajr2016}
+Мохамад Абдул~Карим Альфажр.
+\newblock {Проблемы сохранения исторического
+  облика здания при комплексной реновации
+  памятника архитектуры}.
+\newblock {\em Вестник Белгородского
+  государственного технологического
+  университета им. В.Г.~Шухова}, (9):91--95, 2016.
+
+\bibitem{elsharkawy2025}
+Zeinab Elsharkawy, Hany Kasban, and Mohammed~Y. Abbass.
+\newblock Efficient surface crack segmentation for industrial and civil
+  applications based on an enhanced {YOLOv8} model.
+\newblock {\em Journal of Big Data}, 12, 2025.
+
+\bibitem{liu2022photogrammetry}
+Z.~Liu, R.~Brigham, E.R. Long, et~al.
+\newblock Semantic segmentation and photogrammetry of crowdsourced images to
+  monitor historic facades.
+\newblock {\em Heritage Science}, 10:27, 2022.
+
+\bibitem{elhariri2022unet}
+E.~Elhariri, N.~El-Bendary, and S.A. Taie.
+\newblock Automated pixel-level deep crack segmentation on historical surfaces
+  using {U-Net} models.
+\newblock {\em Algorithms}, 15:281, 2022.
+
+\bibitem{zhong2024fewshot}
+J.~Zhong, Y.~Fan, X.~Zhao, Q.~Zhou, and Y.~Xu.
+\newblock Multi-type structural damage image segmentation via dual-stage
+  optimization-based few-shot learning.
+\newblock {\em Smart Cities}, 7:1888--1906, 2024.
+
+\bibitem{chen2025murals}
+Y.~Chen, A.~Zhang, J.~Shi, F.~Gao, J.~Guo, and R.~Wang.
+\newblock Paint loss detection and segmentation based on {YOLO}: An improved
+  model for ancient murals and color paintings.
+\newblock {\em Heritage}, 8:136, 2025.
+
+\bibitem{zim2024efficientcracknet}
+Abid Zim, Aquib Iqbal, Zaid Al-Huda, Asad Malik, and Minoru Kuribayashi.
+\newblock {EfficientCrackNet}: A lightweight model for crack segmentation.
+\newblock arXiv:2409.18099, 2024.
+
+\bibitem{zhang2025pavement}
+Z.~Zhang, Y.~He, D.~Hu, et~al.
+\newblock Algorithm for pixel-level concrete pavement crack segmentation based
+  on an improved {U-Net} model.
+\newblock {\em Scientific Reports}, 15:6553, 2025.
+
+\bibitem{hadinata2023multiclass}
+P.N. Hadinata, D.~Simanta, L.~Eddy, and K.~Nagai.
+\newblock Multiclass segmentation of concrete surface damages using {U-Net} and
+  {DeepLabV3+}.
+\newblock {\em Applied Sciences}, 13:2398, 2023.
+
+\bibitem{lysanets2025}
+Andriy Lysanets, Oleksandr Kosukha, Taras Panchenko, and Yaroslav Tereshchenko.
+\newblock Ground-level building damage segmentation using a patch-based
+  approach with global and positional embeddings.
+\newblock Preprints, 2025.
+
+\bibitem{yang2025egaunet}
+L.~Yang, J.~Deng, H.~Duan, et~al.
+\newblock An efficient semantic segmentation method for road crack based on
+  {EGA-UNet}.
+\newblock {\em Scientific Reports}, 15:33818, 2025.
+
+\bibitem{wu2022gnn}
+L.~Wu, P.~Cui, J.~Pei, and L.~Zhao.
+\newblock {\em Graph Neural Networks: Foundations, Frontiers, and
+  Applications}.
+\newblock Springer, Singapore, 2022.
+
+\bibitem{lei2024buildings}
+Binyu Lei, Pengyuan Liu, Nikola Milojevic-Dupont, and Filip Biljecki.
+\newblock Predicting building characteristics at urban scale using graph neural
+  networks and street-level context.
+\newblock {\em Computers, Environment and Urban Systems}, 111:102129, 2024.
+
+\bibitem{gao2023pavement}
+Lu~Gao, Ke~Yu, and Pan Lu.
+\newblock Considering the spatial structure of the road network in pavement
+  deterioration modeling.
+\newblock {\em Transportation Research Record: Journal of the Transportation
+  Research Board}, 2678, 2023.
+
+\bibitem{wu2025lifespan}
+P.-Y. Wu and S.~Mundt-Petersen.
+\newblock Empirical quantification and prediction of building component
+  lifespans with graph neural networks.
+\newblock In {\em IOP Conference Series: Earth and Environmental Science},
+  volume 1554, page 012036, 2025.
+
+\bibitem{hu2025pipes}
+Q.~Hu, Y.~Zhang, W.~Liu, Z.~Song, H.~Ji, and F.~Wang.
+\newblock Predicting water pipe failures with graph neural networks:
+  Integrating coupled road and pipeline features.
+\newblock {\em Water}, 17:1307, 2025.
+
+\bibitem{liang2026hetero}
+Xiucheng Liang, Winston Yap, and Filip Biljecki.
+\newblock Heterogeneous graph neural networks for building attribute prediction
+  from hierarchical urban features and cross-view imagery.
+\newblock {\em ISPRS Journal of Photogrammetry and Remote Sensing},
+  234:185--204, 2026.
+
+\end{thebibliography}
