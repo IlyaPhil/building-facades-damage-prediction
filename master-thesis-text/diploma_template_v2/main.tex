@@ -1,7 +1,9 @@
 \documentclass[14pt]{extarticle}
 
 %% Поля: левое 2 см, правое 1 см, верхнее 2 см, нижнее 2 см (требование ВШЭ)
-\usepackage[left=2cm, right=1cm, top=2cm, bottom=2cm]{geometry}
+%%\usepackage[left=2cm, right=1cm, top=2cm, bottom=2cm]{geometry}
+\usepackage[left=2.5cm, right=1cm, top=2cm, bottom=2cm]{geometry}
+
 
 %% Кодировка и язык
 \usepackage{fontspec}
@@ -121,13 +123,19 @@
 ]{biblatex}
 \addbibresource{bib.bib}
 
+\renewcommand{\multicitedelim}{\addcomma\space}
+
 \newcommand{\miou}{mIoU\xspace}
 
-\renewcommand{\figurename}{Рис.}
+\addto\captionsrussian{\renewcommand{\figurename}{Рисунок}}
+\addto\captionsrussian{\renewcommand{\tablename}{Таблица}}
+\addto\captionsrussian{\renewcommand{\contentsname}{Содержание}}
 
-\renewcommand{\tablename}{Таблица}
 
-\renewcommand{\contentsname}{Содержание}
+%% Настройка разделителя в подписях к рисункам и таблицам
+\captionsetup{labelsep=endash, justification=centering}
+\captionsetup[table]{labelsep=endash, justification=raggedright, singlelinecheck=false}
+
 
 % ---------------------------------------------------------------
 \begin{document}
@@ -203,7 +211,7 @@
 
 \vspace{1.0em}
 \noindent\textbf{Ключевые слова:} исторические здания, компьютерное зрение,
-семантическая сегментация повреждений, индекс повреждений, графовые нейросети,
+семантическая сегментация повреждений фасадов, графовые нейросети,
 граф городской застройки.
 
 \newpage
@@ -219,7 +227,7 @@ The proposed method enables automated assessment of the condition of historic bu
 
 \vspace{1.0em}
 \noindent\textbf{Keywords:} historic buildings, computer vision,
-facade damage semantic segmentation, damage index, graph neural networks,
+facade damage semantic segmentation, graph neural networks,
 urban building graph.
 
 \newpage
@@ -240,8 +248,8 @@ urban building graph.
 приведение в удовлетворительное состояние через региональные и муниципальные меры
 поддержки, а также вовлечение их в хозяйственный оборот~\cite{gosprog2025}.
 
-По состоянию на декабрь 2024~г. 89,4\% ОКН федерального
-и 55,8\% регионального и местного значения внесено в Единый государственный реестр
+По состоянию на декабрь 2024~г. 89.4\% ОКН федерального
+и 55.8\% регионального и местного значения внесено в Единый государственный реестр
 недвижимости ОКН. При этом лишь 14\% от этого количества
 объектов находится в неудовлетворительном состоянии~\cite{gosprog2025}.
 
@@ -391,7 +399,7 @@ sp13102,srp2007}, включает в себя ряд мероприятий, п
 На основании данных из открытых источников по состоянию на 2022~г.
 исследователями из~\cite{kontikimaps} был составлен рейтинг городов с наибольшим
 количеством исторической застройки (зданий, построенных до 1917~года),
-представленный на рис.~\ref{fig:cities_rating}.
+представленный на рисунке~\ref{fig:cities_rating}.
 
 \begin{figure}[H]
     \centering
@@ -404,7 +412,7 @@ sp13102,srp2007}, включает в себя ряд мероприятий, п
     \label{fig:cities_rating}
 \end{figure}
 
-Как видно из рис.~\ref{fig:cities_rating}, для всех трёх критериев оценки
+Как видно из рисунка~\ref{fig:cities_rating}, для всех трёх критериев оценки
 количества исторической городской застройки первое место уверенно удерживает
 Санкт-Петербург, где почти каждый пятый квадратный метр в многоквартирных домах
 был возведён до 1917~года~\cite{kontikimaps}, и где проблема инвентаризации и
@@ -600,12 +608,15 @@ mokhireva2019}:
 что более важно -- определить их площадь относительно площади всего
 изображения, что будет использовано для вычисления индекса повреждения фасада здания в главе 2
 
-В табл.~\ref{tab:cv_review} обобщена краткая информация о ряде наиболее
+В таблице~\ref{tab:cv_review} обобщена краткая информация о ряде наиболее
 релевантных исследований, включая объекты исследования, используемые данные,
 архитектуры моделей и диапазоны полученных значений основных метрик.
 
+%% Переопределение отступов, чтобы таблица влезла
+%%\newgeometry{left=2cm, right=1cm, top=2cm, bottom=2cm}
+
 {\small
-\begin{longtable}{|p{1.8cm}|p{4cm}|p{3.5cm}|p{3cm}|p{4.2cm}|}	
+\begin{longtable}{|p{1.8cm}|p{4cm}|p{3.5cm}|p{3cm}|p{3cm}|}	
 
     \caption{Краткая информация об исследованиях в области сегментации
              повреждений зданий и инфраструктурных сооружений.}
@@ -636,7 +647,7 @@ mokhireva2019}:
     Объектная сегментация трещин трубопроводов, зданий, дорог и плитки &
     28663 изображения из 9~датасетов (Crack500, CFD и~др.) &
     YOLOv8-MHSA-TA, YOLOv5, YOLOv7, YOLOv8 &
-    F1: 84,8--97,6\%; mAP@50: 82,8--97,5\% \\
+    F1: 84.8--97.6\%; mAP@50: \newline 82.8--97.5\% \\
     \hline
 
     \cite{liu2022photogrammetry} &
@@ -644,7 +655,7 @@ mokhireva2019}:
     методом фотограмметрии &
     113 краудсорсинговых фотографий замка Ботвелл &
     DeepLabv3 &
-    IoU: 66,9\%; \newline F1: 74,3\%; \newline MPA: 84,4\% \\
+    IoU: 66.9\%; \newline F1: 74.3\%; \newline MPA: 84.4\% \\
     \hline
 
     \cite{elhariri2022unet} &
@@ -652,7 +663,7 @@ mokhireva2019}:
     архитектур U-Net и функций потерь &
     Crack500, собственный датасет (263 изображения) &
     Deep ResU-Net, ResU-Net++, $U^2$-Net &
-    mIoU: 82,0--83,8\% (Crack500); 63,9--78,4\% (исторические здания) \\
+    mIoU: 82.0--83.8\% (Crack500); 63.9--78.4\% (исторические здания) \\
     \hline
 
     \cite{zhong2024fewshot} &
@@ -660,52 +671,54 @@ mokhireva2019}:
     конструкциях &
     Собственный датасет (300 изображений) &
     U-Net, U-Net с алгоритмом Dual Stage Few-Shot Learning &
-    mIoU: 61,6--67,1\%; mPA: 73,7--83,7\% \\
+    mIoU: 61.6--67.1\%; \newline mPA: 73.7--83.7\% \\
     \hline
 
     \cite{chen2025murals} &
     Объектная сегментация повреждений слоя краски на древних фресках &
     856 фотографий фресок Дуньхуана и росписей Пекина &
     PLDS-YOLO (YOLOv8) &
-    mAP@0.5: 79,2--86,2\%; mAP@0.5:0.95: 44,6--53,1\% \\
+    mAP@0.5: 79.2--86.2\%; mAP@0.5:0.95: 44.6--53.1\% \\
     \hline
 
     \cite{zim2024efficientcracknet} &
     Семантическая сегментация трещин в элементах инфраструктуры &
     Crack500, DeepCrack, GAPs384 &
-    \textcolor{red}{EfficientCrackNet}, \newline ShuffleNetV2, MobileNetV3, \textcolor{blue}{EfficientNet}&
-    mIoU: \newline \textcolor{blue}{66,1}--\textcolor{red}{81,3}\% (Crack500); \newline \textcolor{blue}{78,2}--\textcolor{red}{87,1}\% (DeepCrack) \\
+    EfficientCrackNet, \newline ShuffleNetV2, MobileNetV3, EfficientNet&
+    mIoU: 66.1--81.3\% (Crack500); \newline 78.2--87.1\% (DeepCrack) \\
     \hline
 
     \cite{zhang2025pavement} &
     Семантическая сегментация трещин бетонного дорожного покрытия &
     Собственный датасет (960 изображений) &
-    \textcolor{red}{U-Net-FML}, U-Net++, DeepLabv3+, TransNet &
-    MIoU: 74,3--\textcolor{red}{76,4}\%; \newline F1: 71,2--\textcolor{red}{74,2}\%  \\
+    U-Net-FML, U-Net++, DeepLabv3+, TransNet &
+    MIoU: 74.3--76.4\%; \newline F1: 71.2--74.2\%  \\
     \hline
 
     \cite{hadinata2023multiclass} &
     Сегментация трещин, отслоений и пустот в бетонных конструкциях &
     Собственный датасет (400 изображений) &
-    \textcolor{red}{U-Net}, \textcolor{blue}{DeepLabV3+} &
-    Mean F1: \textcolor{blue}{64,8}--\textcolor{red}{72,0}\%; Mean IoU: \textcolor{blue}{51,7}--\textcolor{red}{59,9}\% \\
+    U-Net, DeepLabV3+ &
+    Mean F1: 64.8--72.0\%; Mean IoU: 51.7--59.9\% \\
     \hline
 
     \cite{lysanets2025} &
     Семантическая сегментация повреждений зданий (3 и~6 классов) &
     Собственный датасет (290 изображений) &
-    U-Net с энкодерами \textcolor{red}{ResNet-50}, SwinV2-L, ConvNeXt-L,YOLO 11x-seg, DINOv2 &
-    IoU: 62,5--\textcolor{red}{77,4}\% (3 кл.); 38,3--\textcolor{red}{47,1}\% (6 кл.) \\
+    U-Net с энкодерами ResNet-50, SwinV2-L, ConvNeXt-L, YOLO 11x-seg, DINOv2, SegFormer-B5 &
+    IoU: 62.5--77.4\% (3 класса); 38.3--47.1\% (6 классов) \\
     \hline
 
     \cite{yang2025egaunet} &
     Семантическая сегментация трещин дорожных покрытий &
     Crack500, DeepCrack, CFD &
-    \textcolor{red}{EGA-UNet}, \newline U-Net, SegNet, \newline PSPNet, \textcolor{blue}{DeepLabV3} &
-    mIoU: \textcolor{blue}{81,9}--\textcolor{red}{83,9}\% (Crack500); \newline \textcolor{blue}{84,2}--\textcolor{red}{86,4}\% (DeepCrack) \\
+    EGA-UNet, \newline U-Net, SegNet, \newline PSPNet, DeepLabV3 &
+    mIoU: 81.9--83.9\% (Crack500); \newline 84.2--86.4\% (DeepCrack) \\
 
 \end{longtable}
 }
+
+%%\restoregeometry
 
 На основании приведённой в табл.~\ref{tab:cv_review} информации можно сделать
 следующие выводы:
@@ -713,12 +726,13 @@ mokhireva2019}:
     \item Наибольшее число исследований посвящено сегментации трещин.
           Существует несколько популярных открытых датасетов. В то же время
           для других типов повреждений авторы собирают собственные датасеты
-          (как правило, из нескольких сотен изображений) -- вероятно, из-за
+          (как правило, из нескольких сотен изображений), вероятно, из-за
           отсутствия открытых.
     \item Если не учитывать модификации известных архитектур, созданные в
           рамках отдельных исследований, то наилучшие результаты как на
           трещинах, так и на многоклассовых датасетах показывает модель U-Net,
-          которую можно использовать в качестве базовой.
+          которую можно использовать в качестве базовой модели.
+    \item В большинстве упомянутых исследований [1-5, 10, 11] повреждения на снимках были изображены крупным планом. Одной из задач данной работы является демонстрация того, что для оценки повреждения фасада можно использовать фотографии значительных участков или даже всего фасада, сделанные человеком с земли без применения специальных средств. В данной связи стоит рассмотреть модели, обладающие большим рецептивным полем и хорошо улавливающие не только сами повреждения, но и их конекст, например визуальные трансформеры (Vision Transformer, ViT)
 \end{enumerate}
 
 % ---------------------------------------------------------------
@@ -748,7 +762,7 @@ mokhireva2019}:
 Несмотря на то что исследований применения GNN для пространственной
 интерполяции повреждений зданий в городской среде найти не удалось, ряд близких
 по тематике работ даёт основания полагать, что GNN способны решить данную задачу.
-Краткие сведения об этих исследованиях приведены в табл.~\ref{tab:gnn_review}.
+Краткие сведения об этих исследованиях приведены в таблице~\ref{tab:gnn_review}.
 
 {\small
 \begin{longtable}{|p{1.8cm} | p{3.5cm} | p{4.5cm} | p{2.5cm} | p{2.8cm}|}
@@ -781,7 +795,7 @@ mokhireva2019}:
     \textbf{Вершины:} здания. \textbf{Признаки:} число объектов
     окружения в зонах разного радиуса &
     Данные OpenStreetMap и другие открытые данные для 3 разных городов &
-    \textbf{GraphSAGE} \newline Ошибка $<$1~эт. у 81,8\%; \newline \textbf{Accuracy} \newline тип: 88,3\%; период: 70,5\% \newline материал: 68\% \\
+    \textbf{GraphSAGE} \newline Ошибка $<$1~эт. у 81.8\%; \newline \textbf{Accuracy} \newline тип: 88.3\%; период: 70.5\% \newline материал: 68\% \\
     \hline
 
     \cite{gao2023pavement} &
@@ -790,7 +804,7 @@ mokhireva2019}:
     состояния, трафик, климат, тип покрытия \newline
     \textbf{Рёбра:} Физическая связность секций на маршруте &
     Данные деп. транспорта Техаса; $>$500~тыс. наблюдений &
-    \textbf{GraphSAGE} \newline R$^2$ для IRI: 0,87; для CS: 0,50 \\
+    \textbf{GraphSAGE} \newline R$^2$ для IRI: 0.87; для CS: 0.50 \\
     \hline
 
     \cite{wu2025lifespan} &
@@ -799,7 +813,7 @@ mokhireva2019}:
     \textbf{Признаки:} материал, тип повреждения, климат и т.д. \newline    
     \textbf{Рёбра:} причинно-следственные связи &
     2~100 записей обследований зданий Швеции (2014--2021) &
-    \textbf{GCN, GraphSAGE, GAT} \newline R$^2$ = 0,83 (GCN) \\
+    \textbf{GCN, GraphSAGE, GAT} \newline R$^2$ = 0.83 (GCN) \\
     \hline
 
     \cite{hu2025pipes} &
@@ -807,7 +821,7 @@ mokhireva2019}:
     \textbf{Вершины:} центроиды сегментов труб и перекрёстки дорог.
     \textbf{Признаки:} свойства трубы, трафик, близость к перекрестку, углы пересечения с дорогами \newline \textbf{Ребра:} Пространственная и функциональная связность.&
     ГИС-данные водопроводной сети Шанхая; 1~200 отказов &
-    \textbf{GCN, GraphSAGE, GAT} \newline AUC = 0,821; Recall = 0,878 (GraphSAGE) \\
+    \textbf{GCN, GraphSAGE, GAT} \newline AUC = 0.821; Recall = 0.878 (GraphSAGE) \\
     \hline
 
     \cite{liang2026hetero} &
@@ -816,7 +830,7 @@ mokhireva2019}:
     \textbf{Признаки:} Морфология, топология, эмбеддинги снимков со спутника и видов с улицы. \newline    
     \textbf{Рёбра:} пространственная близость, вложенность &
     OSM, спутниковые снимки, панорамы улиц (Амстердам, Вашингтон, Берлин) &
-     \textbf{GraphSAGE} \newline Accuracy (тип здания): 86--96\%; F1: 0,70--0,73; R$^2$ возраст: 0,80 \\
+     \textbf{GraphSAGE} \newline Accuracy (тип здания): 86--96\%; F1: 0.70--0.73; R$^2$ возраст: 0.80 \\
 
 \end{longtable}
 }
@@ -871,17 +885,11 @@ mokhireva2019}:
 \label{sec:method}
 
 
-\subsection{Семантическая сегментация}
+\subsection{Вычисление индекса повреждения фасада}
 
-[Раздел в разработке]
 
-\subsection{Построение индекса повреждения}
+\subsection{Построение графа зданий и GNN}
 
-[Раздел в разработке]
-
-\subsection{Граф зданий и GNN}
-
-[Раздел в разработке]
 
 \subsection{Выводы по главе 2}
 
@@ -894,8 +902,21 @@ mokhireva2019}:
 % ---------------------------------------------------------------
 %% ===== ГЛАВА 3. Результаты и рекомендации по применению =====
 % ---------------------------------------------------------------
-\section{Результаты и рекомендации по применению}
+\section{Эксперименты и результаты}
 \label{sec:results}
+
+\subsection{Обучение моделей и результаты}
+
+\subsection{Верификация модели}
+
+\subsection{Рекомендации по применению и ограничения метода}
+
+\subsection{Выводы по главе 3}
+
+
+\section*{Заключение}
+\addcontentsline{toc}{section}{Заключение}
+\label{sec:outro}
 
 
 

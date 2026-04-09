@@ -1,202 +1,883 @@
-\begin{thebibliography}{10}
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
 
-\bibitem{gosprog2025}
-{Государственная программа «Сохранение
-  объектов культурного наследия народов
-  Российской Федерации» на период 2025--2045
-  годов}, 2024.
-\newblock Правительство Российской Федерации.
 
-\bibitem{fz73}
-{Федеральный закон № 73-ФЗ «Об объектах
-  культурного наследия (памятниках истории
-  и культуры) народов Российской
-  Федерации»}, 2002.
-\newblock Принят Государственной Думой 24 мая
-  2002~г.
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{zhang2025pavement}{article}{useauthor=false}
+      \true{moreauthor}
+      \name{author}{3}{}{%
+        {{hash=5ee5d3d5470ac29a2e7c8df70ed54725}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=655b6a87a756b5652aefc774a322ac3f}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=9c268865c87073f27239ab3158762cad}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{7a19b147d663923a9f25fb69ccfccb64}
+      \strng{authornamehash}{7a19b147d663923a9f25fb69ccfccb64}
+      \strng{authorfullhash}{7a19b147d663923a9f25fb69ccfccb64}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Scientific Reports}
+      \field{title}{Algorithm for pixel-level concrete pavement crack segmentation based on an improved {U-Net} model}
+      \field{year}{2025}
+      \field{pages}{6553}
+      \range{pages}{1}
+      \field{volume}{15}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1038/s41598-025-91352-x
+      \endverb
+    \endentry
+    \entry{yang2025egaunet}{article}{useauthor=false}
+      \true{moreauthor}
+      \name{author}{3}{}{%
+        {{hash=527f0ca92e7ed462c77915036481c907}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=cbaf4f8829c5ef01cf9659d1d6975526}{%
+           family={Deng},
+           familyi={D\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=fe572f6446ceab04e1cb148efbbd9e24}{%
+           family={Duan},
+           familyi={D\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{e9573c44565b2f631d01e055476d918d}
+      \strng{authornamehash}{e9573c44565b2f631d01e055476d918d}
+      \strng{authorfullhash}{e9573c44565b2f631d01e055476d918d}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Scientific Reports}
+      \field{title}{An efficient semantic segmentation method for road crack based on {EGA-UNet}}
+      \field{year}{2025}
+      \field{pages}{33818}
+      \range{pages}{1}
+      \field{volume}{15}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1038/s41598-025-01983-3
+      \endverb
+    \endentry
+    \entry{zim2024efficientcracknet}{misc}{useauthor=false}
+      \name{author}{5}{}{%
+        {{hash=bc3338831d2d2ac120e706c69299b2f2}{%
+           family={Zim},
+           familyi={Z\bibinitperiod},
+           given={Abid},
+           giveni={A\bibinitperiod}}}%
+        {{hash=da806e5c9999d36f5eaa0bd04f75e1b6}{%
+           family={Iqbal},
+           familyi={I\bibinitperiod},
+           given={Aquib},
+           giveni={A\bibinitperiod}}}%
+        {{hash=09bfb909a1ef12fa4a5af9fce00ccfff}{%
+           family={Al-Huda},
+           familyi={A\bibinithyphendelim H\bibinitperiod},
+           given={Zaid},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=57c8dd02b2517c32c24f550cd3d77751}{%
+           family={Malik},
+           familyi={M\bibinitperiod},
+           given={Asad},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d97b60611476017fbca8ebed15c4e821}{%
+           family={Kuribayashi},
+           familyi={K\bibinitperiod},
+           given={Minoru},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{2b803aa8e760dbb493447fe340e828e7}
+      \strng{authornamehash}{2b803aa8e760dbb493447fe340e828e7}
+      \strng{authorfullhash}{90e7c47d332e2ec54b7e66b5f7a2d175}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{arXiv:2409.18099}
+      \field{title}{{EfficientCrackNet}: A Lightweight Model for Crack Segmentation}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.48550/arXiv.2409.18099
+      \endverb
+    \endentry
+    \entry{elhariri2022unet}{article}{}
+      \name{author}{3}{}{%
+        {{hash=9eb5e311bf48d5a518aa5ea65b478842}{%
+           family={Elhariri},
+           familyi={E\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=2ba653185fbe9d67822d143dfc886934}{%
+           family={El-Bendary},
+           familyi={E\bibinithyphendelim B\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=fb9c9598ea165ed2b48c7c2bdaebc38e}{%
+           family={Taie},
+           familyi={T\bibinitperiod},
+           given={S.A.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{53818694b8f1f9c0cca5b7a2bbbab41c}
+      \strng{fullhash}{53818694b8f1f9c0cca5b7a2bbbab41c}
+      \strng{bibnamehash}{53818694b8f1f9c0cca5b7a2bbbab41c}
+      \strng{authorbibnamehash}{53818694b8f1f9c0cca5b7a2bbbab41c}
+      \strng{authornamehash}{53818694b8f1f9c0cca5b7a2bbbab41c}
+      \strng{authorfullhash}{53818694b8f1f9c0cca5b7a2bbbab41c}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Algorithms}
+      \field{title}{Automated Pixel-Level Deep Crack Segmentation on Historical Surfaces Using {U-Net} Models}
+      \field{year}{2022}
+      \field{pages}{281}
+      \range{pages}{1}
+      \field{volume}{15}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.3390/a15080281
+      \endverb
+    \endentry
+    \entry{elsharkawy2025}{article}{}
+      \name{author}{3}{}{%
+        {{hash=bb1e4ce789ed1a1db7aa3d9f0faceab7}{%
+           family={Elsharkawy},
+           familyi={E\bibinitperiod},
+           given={Zeinab},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=2f3601a11fa175c4fc3861227583355d}{%
+           family={Kasban},
+           familyi={K\bibinitperiod},
+           given={Hany},
+           giveni={H\bibinitperiod}}}%
+        {{hash=f6d2704058ce5c741d59efd9a1f5fee6}{%
+           family={Abbass},
+           familyi={A\bibinitperiod},
+           given={Mohammed\bibnamedelima Y.},
+           giveni={M\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{88a9ad1dd4d1b2a452aca94d478bb0ca}
+      \strng{fullhash}{88a9ad1dd4d1b2a452aca94d478bb0ca}
+      \strng{bibnamehash}{88a9ad1dd4d1b2a452aca94d478bb0ca}
+      \strng{authorbibnamehash}{88a9ad1dd4d1b2a452aca94d478bb0ca}
+      \strng{authornamehash}{88a9ad1dd4d1b2a452aca94d478bb0ca}
+      \strng{authorfullhash}{88a9ad1dd4d1b2a452aca94d478bb0ca}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Big Data}
+      \field{title}{Efficient surface crack segmentation for industrial and civil applications based on an enhanced {YOLOv8} model}
+      \field{year}{2025}
+      \field{volume}{12}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1186/s40537-025-01065-1
+      \endverb
+    \endentry
+    \entry{gao2023pavement}{article}{}
+      \name{author}{3}{}{%
+        {{hash=8ba4dc44e20a33d79eeaf44e36851156}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Lu},
+           giveni={L\bibinitperiod}}}%
+        {{hash=188de48edeb47cc2aa35005615c73965}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Ke},
+           giveni={K\bibinitperiod}}}%
+        {{hash=09912e29fb385253a753123b4386cb33}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Pan},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{6d8981a73221d5ffadbac8711f32ff61}
+      \strng{fullhash}{6d8981a73221d5ffadbac8711f32ff61}
+      \strng{bibnamehash}{6d8981a73221d5ffadbac8711f32ff61}
+      \strng{authorbibnamehash}{6d8981a73221d5ffadbac8711f32ff61}
+      \strng{authornamehash}{6d8981a73221d5ffadbac8711f32ff61}
+      \strng{authorfullhash}{6d8981a73221d5ffadbac8711f32ff61}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Transportation Research Record: Journal of the Transportation Research Board}
+      \field{title}{Considering the Spatial Structure of the Road Network in Pavement Deterioration Modeling}
+      \field{year}{2023}
+      \field{volume}{2678}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1177/03611981231188373
+      \endverb
+    \endentry
+    \entry{wu2022gnn}{book}{useauthor=false}
+      \name{author}{4}{}{%
+        {{hash=a469a40717c59ac58df7d64de918fd16}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=b54484a39eb7a2427a70694fc19ce82e}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=ee9435ea8e635cd54effb58a62439ed2}{%
+           family={Pei},
+           familyi={P\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0d4a8cff3cc7aa7cf7a8e2b46e93005e}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Singapore}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{authorbibnamehash}{4084945fdead26d9528d3308633f762d}
+      \strng{authornamehash}{4084945fdead26d9528d3308633f762d}
+      \strng{authorfullhash}{32c9396b2d87c0f006bb9dab72a7716c}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labeltitlesource}{title}
+      \field{title}{Graph Neural Networks: Foundations, Frontiers, and Applications}
+      \field{year}{2022}
+    \endentry
+    \entry{lysanets2025}{misc}{useauthor=false}
+      \name{author}{4}{}{%
+        {{hash=12109b8eba55c74122c9b08acb8b0809}{%
+           family={Lysanets},
+           familyi={L\bibinitperiod},
+           given={Andriy},
+           giveni={A\bibinitperiod}}}%
+        {{hash=aa12ee9d1b8ae3fa6ed660b49785303a}{%
+           family={Kosukha},
+           familyi={K\bibinitperiod},
+           given={Oleksandr},
+           giveni={O\bibinitperiod}}}%
+        {{hash=6a65f98691cb3c0eb026db51cae6a446}{%
+           family={Panchenko},
+           familyi={P\bibinitperiod},
+           given={Taras},
+           giveni={T\bibinitperiod}}}%
+        {{hash=09d08b3b8c02c85b574fed66a5054407}{%
+           family={Tereshchenko},
+           familyi={T\bibinitperiod},
+           given={Yaroslav},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{3c1826be516d7d900da8390cad0ea57c}
+      \strng{authornamehash}{3c1826be516d7d900da8390cad0ea57c}
+      \strng{authorfullhash}{56c6114f81e54f3572a3784222a115d9}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Preprints}
+      \field{title}{Ground-Level Building Damage Segmentation Using a Patch-Based Approach with Global and Positional Embeddings}
+      \field{year}{2025}
+      \verb{doi}
+      \verb 10.20944/preprints202510.2032.v1
+      \endverb
+    \endentry
+    \entry{liang2026hetero}{article}{}
+      \name{author}{3}{}{%
+        {{hash=38b6079d47cae30f2eb315d08355e68e}{%
+           family={Liang},
+           familyi={L\bibinitperiod},
+           given={Xiucheng},
+           giveni={X\bibinitperiod}}}%
+        {{hash=f8e732852678a9222266f0ae16740bef}{%
+           family={Yap},
+           familyi={Y\bibinitperiod},
+           given={Winston},
+           giveni={W\bibinitperiod}}}%
+        {{hash=1fd5624cf140576d8190e859c4f4a325}{%
+           family={Biljecki},
+           familyi={B\bibinitperiod},
+           given={Filip},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{535f77e7d144456609393dab9d26e339}
+      \strng{fullhash}{535f77e7d144456609393dab9d26e339}
+      \strng{bibnamehash}{535f77e7d144456609393dab9d26e339}
+      \strng{authorbibnamehash}{535f77e7d144456609393dab9d26e339}
+      \strng{authornamehash}{535f77e7d144456609393dab9d26e339}
+      \strng{authorfullhash}{535f77e7d144456609393dab9d26e339}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ISPRS Journal of Photogrammetry and Remote Sensing}
+      \field{title}{Heterogeneous graph neural networks for building attribute prediction from hierarchical urban features and cross-view imagery}
+      \field{year}{2026}
+      \field{pages}{185\bibrangedash 204}
+      \range{pages}{20}
+      \field{volume}{234}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1016/j.isprsjprs.2026.02.016
+      \endverb
+    \endentry
+    \entry{zhong2024fewshot}{article}{useauthor=false}
+      \name{author}{5}{}{%
+        {{hash=0947d71058782c5d2ea95e4d1155ccdd}{%
+           family={Zhong},
+           familyi={Z\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=9f7fd6fb881501ca5ea978714193f2e1}{%
+           family={Fan},
+           familyi={F\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=b2ff85d118c95088c7ca004045563aa8}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+        {{hash=905c20223ceb6aa6a47127bdd043a546}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Q.},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=2efac453cb818e3e871c3147d9153d6d}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{390880b16593693e8cd167e0b2928747}
+      \strng{authornamehash}{390880b16593693e8cd167e0b2928747}
+      \strng{authorfullhash}{503b2afef2067cf6f405d4f99bb16e75}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Smart Cities}
+      \field{title}{Multi-Type Structural Damage Image Segmentation via Dual-Stage Optimization-Based Few-Shot Learning}
+      \field{year}{2024}
+      \field{pages}{1888\bibrangedash 1906}
+      \range{pages}{19}
+      \field{volume}{7}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.3390/smartcities7040074
+      \endverb
+    \endentry
+    \entry{hadinata2023multiclass}{article}{useauthor=false}
+      \name{author}{4}{}{%
+        {{hash=ca89ab7b093abcc8d22eee2331a4c3d6}{%
+           family={Hadinata},
+           familyi={H\bibinitperiod},
+           given={P.N.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=eaa551f704e23d2d3daeaa478489d3a1}{%
+           family={Simanta},
+           familyi={S\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=f6f31ed5fef0e4592228b5969df65cbe}{%
+           family={Eddy},
+           familyi={E\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=7c54e652f53ffe51c766fff45abb7969}{%
+           family={Nagai},
+           familyi={N\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{b0faa772045ba8c61211eedabd1d7db2}
+      \strng{authornamehash}{b0faa772045ba8c61211eedabd1d7db2}
+      \strng{authorfullhash}{409907434f11d29dc466e1e43235c8e7}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Applied Sciences}
+      \field{title}{Multiclass Segmentation of Concrete Surface Damages Using {U-Net} and {DeepLabV3+}}
+      \field{year}{2023}
+      \field{pages}{2398}
+      \range{pages}{1}
+      \field{volume}{13}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.3390/app13042398
+      \endverb
+    \endentry
+    \entry{chen2025murals}{article}{useauthor=false}
+      \name{author}{6}{}{%
+        {{hash=ff38b98d2dc65002f66d028a85b9d58d}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=78aae8764fe7c5365dd438e4abef0c06}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=3b3d8a7d315744c8cea7f094e48581d2}{%
+           family={Shi},
+           familyi={S\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f51012d08701067ab094224f68671282}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=28f6068ba57e60c5e27fc2490a8e1ffd}{%
+           family={Guo},
+           familyi={G\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=95c40ddfdd2cb0ac5a1ef74bb71692f3}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{285643e98622aae7df83abdb517b753d}
+      \strng{authornamehash}{285643e98622aae7df83abdb517b753d}
+      \strng{authorfullhash}{7490b85f6b1656cba5ebc4b259183567}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Heritage}
+      \field{title}{Paint Loss Detection and Segmentation Based on {YOLO}: An Improved Model for Ancient Murals and Color Paintings}
+      \field{year}{2025}
+      \field{pages}{136}
+      \range{pages}{1}
+      \field{volume}{8}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.3390/heritage8040136
+      \endverb
+    \endentry
+    \entry{lei2024buildings}{article}{useauthor=false}
+      \name{author}{4}{}{%
+        {{hash=a25016d55f7c4763280edffb59a55ab7}{%
+           family={Lei},
+           familyi={L\bibinitperiod},
+           given={Binyu},
+           giveni={B\bibinitperiod}}}%
+        {{hash=ea1165d58aff06c08a0b0ea27f1076e8}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Pengyuan},
+           giveni={P\bibinitperiod}}}%
+        {{hash=7d7f0c3e722587df73e493eabf4b350f}{%
+           family={Milojevic-Dupont},
+           familyi={M\bibinithyphendelim D\bibinitperiod},
+           given={Nikola},
+           giveni={N\bibinitperiod}}}%
+        {{hash=1fd5624cf140576d8190e859c4f4a325}{%
+           family={Biljecki},
+           familyi={B\bibinitperiod},
+           given={Filip},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{cde3842961ccde2a020d437b6f2b20ef}
+      \strng{authornamehash}{cde3842961ccde2a020d437b6f2b20ef}
+      \strng{authorfullhash}{a9782fe966ee79f05e6ccac721cc6e98}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computers, Environment and Urban Systems}
+      \field{title}{Predicting building characteristics at urban scale using graph neural networks and street-level context}
+      \field{year}{2024}
+      \field{pages}{102129}
+      \range{pages}{1}
+      \field{volume}{111}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1016/j.compenvurbsys.2024.102129
+      \endverb
+    \endentry
+    \entry{hu2025pipes}{article}{useauthor=false}
+      \name{author}{6}{}{%
+        {{hash=56b8a1fc07c4ccc160fac4c4caed0546}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Q.},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=1f26f664835ac6c347db22001b657f1a}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=d8525af2f6ab588f2e4d6e5abd42ca8b}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+        {{hash=43ed8005bc3d579e73c7f43cafa90632}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=f83b912d3669cab1a269b34dddb1eb1d}{%
+           family={Ji},
+           familyi={J\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=3768cb3691d9f8be784a4b189ba55772}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{a81d74901ee95d73ca3469d26d48217a}
+      \strng{authornamehash}{a81d74901ee95d73ca3469d26d48217a}
+      \strng{authorfullhash}{1692cb014639c31a61d29a76a071f5de}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Water}
+      \field{title}{Predicting Water Pipe Failures with Graph Neural Networks: Integrating Coupled Road and Pipeline Features}
+      \field{year}{2025}
+      \field{pages}{1307}
+      \range{pages}{1}
+      \field{volume}{17}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.3390/w17091307
+      \endverb
+    \endentry
+    \entry{liu2022photogrammetry}{article}{useauthor=false}
+      \true{moreauthor}
+      \name{author}{3}{}{%
+        {{hash=4502ea5dcc2b2cf1ac11fe01b5f68826}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=c0f65bcf82d6f2dabb6466fe18c35e7c}{%
+           family={Brigham},
+           familyi={B\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=1871f8b6f8bdcb9fc5b2cb2a6d76d4bd}{%
+           family={Long},
+           familyi={L\bibinitperiod},
+           given={E.R.},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{b0bb5aa3a59c0faf20425c1e2cfa0103}
+      \strng{authornamehash}{b0bb5aa3a59c0faf20425c1e2cfa0103}
+      \strng{authorfullhash}{b0bb5aa3a59c0faf20425c1e2cfa0103}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Heritage Science}
+      \field{title}{Semantic segmentation and photogrammetry of crowdsourced images to monitor historic facades}
+      \field{year}{2022}
+      \field{pages}{27}
+      \range{pages}{1}
+      \field{volume}{10}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1186/s40494-022-00664-y
+      \endverb
+    \endentry
+    \entry{wu2025lifespan}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=027e804016cdafeb008ddc2342f6f613}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={P.-Y.},
+           giveni={P\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=aa054cf1ecfdfe65d56cd7cdeeb07ae0}{%
+           family={Mundt-Petersen},
+           familyi={M\bibinithyphendelim P\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{b974f085fc094741bf78eb1257995f17}
+      \strng{fullhash}{b974f085fc094741bf78eb1257995f17}
+      \strng{bibnamehash}{b974f085fc094741bf78eb1257995f17}
+      \strng{authorbibnamehash}{b974f085fc094741bf78eb1257995f17}
+      \strng{authornamehash}{b974f085fc094741bf78eb1257995f17}
+      \strng{authorfullhash}{b974f085fc094741bf78eb1257995f17}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IOP Conference Series: Earth and Environmental Science}
+      \field{title}{Empirical Quantification and Prediction of Building Component Lifespans with Graph Neural Networks}
+      \field{year}{2025}
+      \field{pages}{012036}
+      \range{pages}{1}
+      \field{volume}{1554}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1088/1755-1315/1554/1/012036
+      \endverb
+    \endentry
+    \entry{alfajr2016}{article}{}
+      \name{author}{1}{}{%
+        {{hash=30f551cb9f3fce762649d857b03595c5}{%
+           family={Альфажр},
+           familyi={А\bibinitperiod},
+           given={Мохамад\bibnamedelimb Абдул\bibnamedelima Карим},
+           giveni={М\bibinitperiod\bibinitdelim А\bibinitperiod\bibinitdelim К\bibinitperiod}}}%
+      }
+      \strng{namehash}{30f551cb9f3fce762649d857b03595c5}
+      \strng{fullhash}{30f551cb9f3fce762649d857b03595c5}
+      \strng{bibnamehash}{30f551cb9f3fce762649d857b03595c5}
+      \strng{authorbibnamehash}{30f551cb9f3fce762649d857b03595c5}
+      \strng{authornamehash}{30f551cb9f3fce762649d857b03595c5}
+      \strng{authorfullhash}{30f551cb9f3fce762649d857b03595c5}
+      \field{sortinit}{А}
+      \field{sortinithash}{9db8541854f3671fde760253476fbbdb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Вестник Белгородского государственного технологического университета им. В.Г.~Шухова}
+      \field{title}{{Проблемы сохранения исторического облика здания при комплексной реновации памятника архитектуры}}
+      \field{year}{2016}
+      \field{number}{9}
+      \range{number}{1}
+      \field{pages}{91\bibrangedash 95}
+      \range{pages}{5}
+    \endentry
+    \entry{vsn5386}{misc}{}
+      \list{organization}{1}{%
+        {Государственный комитет по гражданскому строительству и архитектуре при Госстрое СССР}%
+      }
+      \field{sortinit}{В}
+      \field{sortinithash}{769561dacf0468c568f33adb4926797c}
+      \field{labeltitlesource}{title}
+      \field{title}{{ВСН 53-86(р). Правила оценки физического износа жилых зданий}}
+      \field{year}{1988}
+    \endentry
+    \entry{vsn5888}{misc}{}
+      \list{organization}{1}{%
+        {Государственный комитет по архитектуре и градостроительству при Госстрое СССР}%
+      }
+      \field{sortinit}{В}
+      \field{sortinithash}{769561dacf0468c568f33adb4926797c}
+      \field{labeltitlesource}{title}
+      \field{title}{{ВСН 58-88(р). Положение об организации и проведении реконструкции, ремонта и технического обслуживания зданий}}
+      \field{year}{1989}
+    \endentry
+    \entry{gost31937}{misc}{}
+      \list{organization}{1}{%
+        {Федеральное агентство по техническому регулированию и метрологии}%
+      }
+      \field{sortinit}{Г}
+      \field{sortinithash}{c5a772f362f759c048c1f27b275f0dbf}
+      \field{labeltitlesource}{title}
+      \field{title}{{ГОСТ 31937-2024. Здания и сооружения. Правила обследования и мониторинга технического состояния}}
+      \field{year}{2024}
+    \endentry
+    \entry{gost55567}{misc}{}
+      \list{organization}{1}{%
+        {Федеральное агентство по техническому регулированию и метрологии}%
+      }
+      \field{sortinit}{Г}
+      \field{sortinithash}{c5a772f362f759c048c1f27b275f0dbf}
+      \field{labeltitlesource}{title}
+      \field{title}{{ГОСТ Р 55567-2013. Порядок организации и ведения инженерно-технических исследований на объектах культурного наследия. Памятники истории и культуры. Общие требования}}
+      \field{year}{2013}
+    \endentry
+    \entry{gosprog2025}{misc}{}
+      \field{sortinit}{Г}
+      \field{sortinithash}{c5a772f362f759c048c1f27b275f0dbf}
+      \field{labeltitlesource}{title}
+      \field{note}{Правительство Российской Федерации}
+      \field{title}{{Государственная программа «Сохранение объектов культурного наследия народов Российской Федерации» на период 2025--2045 годов}}
+      \field{year}{2024}
+    \endentry
+    \entry{spblaw820}{misc}{}
+      \field{sortinit}{З}
+      \field{sortinithash}{1d80b3a15a09c2872443be31e19ee653}
+      \field{labeltitlesource}{title}
+      \field{title}{{Закон Санкт-Петербурга от 19.01.2009 № 820-7 «О границах объединённых зон охраны объектов культурного наследия, расположенных на территории Санкт-Петербурга, режимах использования земель и требованиях к градостроительным регламентам в границах указанных зон»}}
+      \field{year}{2009}
+    \endentry
+    \entry{mokhireva2019}{article}{useauthor=false}
+      \name{author}{5}{}{%
+        {{hash=d9a02acfa17bd380b8cd5e938534f26a}{%
+           family={Мохирева},
+           familyi={М\bibinitperiod},
+           given={А.О.},
+           giveni={А\bibinitperiod}}}%
+        {{hash=419bbe468e749e0e001127990450c08b}{%
+           family={Глебова},
+           familyi={Г\bibinitperiod},
+           given={Е.А.},
+           giveni={Е\bibinitperiod}}}%
+        {{hash=32c21d711d561e04dadd5247fa27e316}{%
+           family={Логинова},
+           familyi={Л\bibinitperiod},
+           given={П.В.},
+           giveni={П\bibinitperiod}}}%
+        {{hash=eb8b9516f66d4bb1ebffefda7bb6ed87}{%
+           family={Назинян},
+           familyi={Н\bibinitperiod},
+           given={Л.Г.},
+           giveni={Л\bibinitperiod}}}%
+        {{hash=686f700ea454ab6b524d2ceb39c23aad}{%
+           family={Тихонович},
+           familyi={Т\bibinitperiod},
+           given={Н.А.},
+           giveni={Н\bibinitperiod}}}%
+      }
+      \strng{authorbibnamehash}{3c6fbaf581e5145bda9714a8541479da}
+      \strng{authornamehash}{3c6fbaf581e5145bda9714a8541479da}
+      \strng{authorfullhash}{57ac151cc64039d0f4218fb5529e8e81}
+      \field{sortinit}{К}
+      \field{sortinithash}{007824ff2af181c6f6762379475efd5a}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Строительство уникальных зданий и сооружений}
+      \field{title}{{Качественная оценка стоимости ремонта исторических зданий при использовании систем автоматизированного мониторинга}}
+      \field{year}{2019}
+      \field{number}{2 (77)}
+      \range{number}{-1}
+      \field{pages}{7\bibrangedash 22}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.18720/CUBS.77.1
+      \endverb
+    \endentry
+    \entry{medyanik2018}{article}{}
+      \name{author}{1}{}{%
+        {{hash=b83e24bb51d6145dfa7643e1c2eda303}{%
+           family={Медяник},
+           familyi={М\bibinitperiod},
+           given={Ю.В.},
+           giveni={Ю\bibinitperiod}}}%
+      }
+      \strng{namehash}{b83e24bb51d6145dfa7643e1c2eda303}
+      \strng{fullhash}{b83e24bb51d6145dfa7643e1c2eda303}
+      \strng{bibnamehash}{b83e24bb51d6145dfa7643e1c2eda303}
+      \strng{authorbibnamehash}{b83e24bb51d6145dfa7643e1c2eda303}
+      \strng{authornamehash}{b83e24bb51d6145dfa7643e1c2eda303}
+      \strng{authorfullhash}{b83e24bb51d6145dfa7643e1c2eda303}
+      \field{sortinit}{М}
+      \field{sortinithash}{3750e8e5bcd54966a663076166442576}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Известия Казанского государственного архитектурно-строительного университета}
+      \field{title}{{Классификация и анализ дефектов и повреждений штукатурных покрытий фасадов зданий}}
+      \field{year}{2018}
+      \field{number}{2 (44)}
+      \range{number}{-1}
+      \field{pages}{231\bibrangedash 238}
+      \range{pages}{8}
+    \endentry
+    \entry{kontikimaps}{misc}{}
+      \field{sortinit}{Р}
+      \field{sortinithash}{72653a62bb3cb54ced08865870aff9d6}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://kontikimaps.ru/}}
+      \field{note}{Дата обращения: 04.04.2026}
+      \field{title}{Рейтинг городов России с сохранившейся исторической городской застройкой}
+      \field{year}{2022}
+    \endentry
+    \entry{srp2007}{misc}{}
+      \list{organization}{1}{%
+        {Министерство культуры Российской Федерации}%
+      }
+      \field{sortinit}{С}
+      \field{sortinithash}{e581ee5e052c6c8e9beb0cf2da905808}
+      \field{labeltitlesource}{title}
+      \field{title}{{Свод реставрационных правил СРП-2007. Рекомендации по проведению научно-исследовательских, изыскательских, проектных и производственных работ, направленных на сохранение объектов культурного наследия народов Российской Федерации}}
+      \field{year}{2007}
+    \endentry
+    \entry{sp13102}{misc}{}
+      \list{organization}{1}{%
+        {Госстрой России}%
+      }
+      \field{sortinit}{С}
+      \field{sortinithash}{e581ee5e052c6c8e9beb0cf2da905808}
+      \field{labeltitlesource}{title}
+      \field{title}{{СП 13-102-2003. Правила обследования несущих строительных конструкций зданий и сооружений}}
+      \field{year}{2003}
+    \endentry
+    \entry{fz73}{misc}{}
+      \field{sortinit}{Ф}
+      \field{sortinithash}{b428a16bb8d154b256b1e6c39440f4f9}
+      \field{labeltitlesource}{title}
+      \field{note}{Принят Государственной Думой 24 мая 2002~г.}
+      \field{title}{{Федеральный закон № 73-ФЗ «Об объектах культурного наследия (памятниках истории и культуры) народов Российской Федерации»}}
+      \field{year}{2002}
+    \endentry
+    \entry{chistyakov2014}{book}{}
+      \name{author}{2}{}{%
+        {{hash=46794256afa8191ace1788b059001a20}{%
+           family={Чистяков},
+           familyi={Ч\bibinitperiod},
+           given={А.Н.},
+           giveni={А\bibinitperiod}}}%
+        {{hash=47a92a4da09b6424ca32c847c80fe29d}{%
+           family={Крогиус},
+           familyi={К\bibinitperiod},
+           given={М.Э.},
+           giveni={М\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Санкт-Петербург}%
+      }
+      \list{publisher}{1}{%
+        {СПбКО}%
+      }
+      \strng{namehash}{6186611a62b9586603f73117f872de06}
+      \strng{fullhash}{6186611a62b9586603f73117f872de06}
+      \strng{bibnamehash}{6186611a62b9586603f73117f872de06}
+      \strng{authorbibnamehash}{6186611a62b9586603f73117f872de06}
+      \strng{authornamehash}{6186611a62b9586603f73117f872de06}
+      \strng{authorfullhash}{6186611a62b9586603f73117f872de06}
+      \field{sortinit}{Ч}
+      \field{sortinithash}{6938aa9a16694a508738b73afded611d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-5-903983-38-4}
+      \field{title}{{Типология разрушений памятников культуры}}
+      \field{year}{2014}
+      \field{pages}{153}
+      \range{pages}{1}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
 
-\bibitem{gost31937}
-{ГОСТ 31937-2024. Здания и сооружения. Правила
-  обследования и мониторинга технического
-  состояния}, 2024.
-
-\bibitem{gost55567}
-{ГОСТ Р 55567-2013. Порядок организации и
-  ведения инженерно-технических
-  исследований на объектах культурного
-  наследия. Памятники истории и культуры.
-  Общие требования}, 2013.
-
-\bibitem{vsn5386}
-{ВСН 53-86(р). Правила оценки физического
-  износа жилых зданий}, 1988.
-
-\bibitem{vsn5888}
-{ВСН 58-88(р). Положение об организации и
-  проведении реконструкции, ремонта и
-  технического обслуживания зданий}, 1989.
-
-\bibitem{sp13102}
-{СП 13-102-2003. Правила обследования несущих
-  строительных конструкций зданий и
-  сооружений}, 2003.
-
-\bibitem{srp2007}
-{Свод реставрационных правил СРП-2007.
-  Рекомендации по проведению
-  научно-исследовательских,
-  изыскательских, проектных и
-  производственных работ, направленных на
-  сохранение объектов культурного наследия
-  народов Российской Федерации}, 2007.
-
-\bibitem{chistyakov2014}
-А.Н. Чистяков and М.Э. Крогиус.
-\newblock {\em {Типология разрушений памятников
-  культуры}}.
-\newblock СПбКО, Санкт-Петербург, 2014.
-
-\bibitem{kontikimaps}
-Рейтинг городов России с сохранившейся
-  исторической городской застройкой.
-\newblock \url{https://kontikimaps.ru/}, 2022.
-\newblock Дата обращения: 2025.
-
-\bibitem{spblaw820}
-{Закон Санкт-Петербурга от 19.01.2009 № 820-7 «О
-  границах объединённых зон охраны
-  объектов культурного наследия,
-  расположенных на территории
-  Санкт-Петербурга, режимах использования
-  земель и требованиях к градостроительным
-  регламентам в границах указанных зон»},
-  2009.
-
-\bibitem{mokhireva2019}
-А.О. Мохирева, Е.А. Глебова, П.В. Логинова, Л.Г.
-  Назинян, and Н.А. Тихонович.
-\newblock {Качественная оценка стоимости
-  ремонта исторических зданий при
-  использовании систем
-  автоматизированного мониторинга}.
-\newblock {\em Строительство уникальных зданий и
-  сооружений}, (2 (77)):7--22, 2019.
-
-\bibitem{medyanik2018}
-Ю.В. Медяник.
-\newblock {Классификация и анализ дефектов и
-  повреждений штукатурных покрытий фасадов
-  зданий}.
-\newblock {\em Известия Казанского
-  государственного
-  архитектурно-строительного
-  университета}, (2 (44)):231--238, 2018.
-
-\bibitem{alfajr2016}
-Мохамад Абдул~Карим Альфажр.
-\newblock {Проблемы сохранения исторического
-  облика здания при комплексной реновации
-  памятника архитектуры}.
-\newblock {\em Вестник Белгородского
-  государственного технологического
-  университета им. В.Г.~Шухова}, (9):91--95, 2016.
-
-\bibitem{elsharkawy2025}
-Zeinab Elsharkawy, Hany Kasban, and Mohammed~Y. Abbass.
-\newblock Efficient surface crack segmentation for industrial and civil
-  applications based on an enhanced {YOLOv8} model.
-\newblock {\em Journal of Big Data}, 12, 2025.
-
-\bibitem{liu2022photogrammetry}
-Z.~Liu, R.~Brigham, E.R. Long, et~al.
-\newblock Semantic segmentation and photogrammetry of crowdsourced images to
-  monitor historic facades.
-\newblock {\em Heritage Science}, 10:27, 2022.
-
-\bibitem{elhariri2022unet}
-E.~Elhariri, N.~El-Bendary, and S.A. Taie.
-\newblock Automated pixel-level deep crack segmentation on historical surfaces
-  using {U-Net} models.
-\newblock {\em Algorithms}, 15:281, 2022.
-
-\bibitem{zhong2024fewshot}
-J.~Zhong, Y.~Fan, X.~Zhao, Q.~Zhou, and Y.~Xu.
-\newblock Multi-type structural damage image segmentation via dual-stage
-  optimization-based few-shot learning.
-\newblock {\em Smart Cities}, 7:1888--1906, 2024.
-
-\bibitem{chen2025murals}
-Y.~Chen, A.~Zhang, J.~Shi, F.~Gao, J.~Guo, and R.~Wang.
-\newblock Paint loss detection and segmentation based on {YOLO}: An improved
-  model for ancient murals and color paintings.
-\newblock {\em Heritage}, 8:136, 2025.
-
-\bibitem{zim2024efficientcracknet}
-Abid Zim, Aquib Iqbal, Zaid Al-Huda, Asad Malik, and Minoru Kuribayashi.
-\newblock {EfficientCrackNet}: A lightweight model for crack segmentation.
-\newblock arXiv:2409.18099, 2024.
-
-\bibitem{zhang2025pavement}
-Z.~Zhang, Y.~He, D.~Hu, et~al.
-\newblock Algorithm for pixel-level concrete pavement crack segmentation based
-  on an improved {U-Net} model.
-\newblock {\em Scientific Reports}, 15:6553, 2025.
-
-\bibitem{hadinata2023multiclass}
-P.N. Hadinata, D.~Simanta, L.~Eddy, and K.~Nagai.
-\newblock Multiclass segmentation of concrete surface damages using {U-Net} and
-  {DeepLabV3+}.
-\newblock {\em Applied Sciences}, 13:2398, 2023.
-
-\bibitem{lysanets2025}
-Andriy Lysanets, Oleksandr Kosukha, Taras Panchenko, and Yaroslav Tereshchenko.
-\newblock Ground-level building damage segmentation using a patch-based
-  approach with global and positional embeddings.
-\newblock Preprints, 2025.
-
-\bibitem{yang2025egaunet}
-L.~Yang, J.~Deng, H.~Duan, et~al.
-\newblock An efficient semantic segmentation method for road crack based on
-  {EGA-UNet}.
-\newblock {\em Scientific Reports}, 15:33818, 2025.
-
-\bibitem{wu2022gnn}
-L.~Wu, P.~Cui, J.~Pei, and L.~Zhao.
-\newblock {\em Graph Neural Networks: Foundations, Frontiers, and
-  Applications}.
-\newblock Springer, Singapore, 2022.
-
-\bibitem{lei2024buildings}
-Binyu Lei, Pengyuan Liu, Nikola Milojevic-Dupont, and Filip Biljecki.
-\newblock Predicting building characteristics at urban scale using graph neural
-  networks and street-level context.
-\newblock {\em Computers, Environment and Urban Systems}, 111:102129, 2024.
-
-\bibitem{gao2023pavement}
-Lu~Gao, Ke~Yu, and Pan Lu.
-\newblock Considering the spatial structure of the road network in pavement
-  deterioration modeling.
-\newblock {\em Transportation Research Record: Journal of the Transportation
-  Research Board}, 2678, 2023.
-
-\bibitem{wu2025lifespan}
-P.-Y. Wu and S.~Mundt-Petersen.
-\newblock Empirical quantification and prediction of building component
-  lifespans with graph neural networks.
-\newblock In {\em IOP Conference Series: Earth and Environmental Science},
-  volume 1554, page 012036, 2025.
-
-\bibitem{hu2025pipes}
-Q.~Hu, Y.~Zhang, W.~Liu, Z.~Song, H.~Ji, and F.~Wang.
-\newblock Predicting water pipe failures with graph neural networks:
-  Integrating coupled road and pipeline features.
-\newblock {\em Water}, 17:1307, 2025.
-
-\bibitem{liang2026hetero}
-Xiucheng Liang, Winston Yap, and Filip Biljecki.
-\newblock Heterogeneous graph neural networks for building attribute prediction
-  from hierarchical urban features and cross-view imagery.
-\newblock {\em ISPRS Journal of Photogrammetry and Remote Sensing},
-  234:185--204, 2026.
-
-\end{thebibliography}
