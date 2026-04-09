@@ -8,6 +8,9 @@
 \setmainfont{FreeSerif}
 \setsansfont{FreeSans}
 \setmonofont{FreeMono}
+\usepackage{polyglossia}
+\setmainlanguage{russian}
+\setotherlanguage{english}
 
 
 
@@ -110,8 +113,13 @@
 }
 
 %% Библиография
-\renewcommand{\refname}{Список литературы}
-\bibliographystyle{gost2008}
+\usepackage[
+  backend=biber,
+  style=gost-numeric,
+  language=auto,
+  autolang=other
+]{biblatex}
+\addbibresource{bib.bib}
 
 \newcommand{\miou}{mIoU\xspace}
 
@@ -895,7 +903,6 @@ mokhireva2019}:
 % ---------------------------------------------------------------
 %% ===== СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ =====
 % ---------------------------------------------------------------
-\addcontentsline{toc}{section}{Список использованных источников}
-\bibliography{bib}
+\printbibliography[heading=bibintoc, title={Список использованных источников}]
 
 \end{document}
