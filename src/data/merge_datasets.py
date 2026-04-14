@@ -11,8 +11,8 @@ BASE_DIR = Path("/home/neuralist/HSE_AI_master/master-thesis/building-facades-da
 DS1_RAW = BASE_DIR / "data/raw/screenshots_206_imgs"
 DS1_MASKS = BASE_DIR / "data/raw/facade-damage-seg-206-imgs-v2/SegmentationClass"
 
-DS2_RAW = BASE_DIR / "data/raw/facades_2022_cvat_101_imgs"
-DS2_MASKS = BASE_DIR / "data/raw/facade-damage-seg-101-imgs-v2/SegmentationClass"
+DS2_RAW = BASE_DIR / "data/raw/100_100_imgs_raw"
+DS2_MASKS = BASE_DIR / "data/raw/facade-damage-seg-100_100_imgs/SegmentationClass"
 
 # Путь для сохранения объединенного датасета
 OUT_DIR = BASE_DIR / "data/processed/unified_dataset"
@@ -89,9 +89,19 @@ def process_dataset(raw_dir, masks_dir, img_ext, resize_needed=False, is_ds1=Tru
             
         base_name = os.path.splitext(mask_file)[0]
         mask_path = masks_dir / mask_file
-        img_path = raw_dir / (base_name + img_ext)
         
-        if img_path.exists():
+        img_path = None
+        
+        # Проверяем возможные варианты расширений
+        possible_exts = [img_ext, '.jpg', '.JPG', '.png', '.jpeg']
+        for ext in possible_exts:
+            p = raw_dir / (base_name + ext)
+            if p.exists():
+                img_path = p
+                break
+                
+        if img_path is not None:
+
             # Находим доминирующий/редкий класс для стратификации
             strata_class = get_rarest_class_in_mask(mask_path, is_ds1)
             

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.4.3)  9 APR 2026 22:11
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.4.3)  9 APR 2026 22:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1573,7 +1573,12 @@ File: figures/image7.1.png Graphic file (type bmp)
  [15]
 File: figures/image8.png Graphic file (type bmp)
 <figures/image8.png>
- [16]
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\newline' on input line 599.
+
+[16]
 Overfull \hbox (2.77296pt too wide) in paragraph at lines 627--627
 []|\TU/FreeSerif(1)/b/n/12 Источник| 
  []
@@ -2441,10 +2446,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31251 strings out of 477416
- 661719 string characters out of 5844819
+ 31252 strings out of 477416
+ 661730 string characters out of 5844819
  1615537 words of memory out of 5000000
- 51397 multiletter control sequences out of 15000+600000
+ 51398 multiletter control sequences out of 15000+600000
  482961 words of font info for 147 fonts, out of 8000000 for 9000
  682 hyphenation exceptions out of 8191
  73i,11n,117p,829b,5772s stack positions out of 5000i,500n,10000p,200000b,80000s

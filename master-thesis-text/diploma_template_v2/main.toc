@@ -12,7 +12,7 @@
 \contentsline {paragraph}{Высолы и мокрые пятна.}{14}{section*.14}%
 \contentsline {paragraph}{Коррозия металла.}{15}{section*.16}%
 \contentsline {paragraph}{Граффити и прочие антропогенные воздействия.}{16}{section*.18}%
-\contentsline {subsection}{\numberline {1.3}Обзор методов компьютерного зрения для оценки повреждений зданий}{16}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.3}Обзор методов компьютерного зрения для оценки \newline повреждений зданий}{16}{subsection.1.3}%
 \contentsline {subsection}{\numberline {1.4}Обзор методов анализа графовых данных}{19}{subsection.1.4}%
 \contentsline {subsection}{\numberline {1.5}Выводы по главе 1}{22}{subsection.1.5}%
 \contentsline {section}{\numberline {2}Методология исследования}{23}{section.2}%

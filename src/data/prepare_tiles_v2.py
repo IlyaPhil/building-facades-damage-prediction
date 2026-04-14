@@ -5,13 +5,13 @@ from tqdm import tqdm
 from pathlib import Path
 
 # Папка с широкими планами (исходниками для инференса)
-INPUT_DIR = Path("data/processed/inference_test")
+INPUT_DIR = Path("data/processed/inference-300-imgs")
 if not INPUT_DIR.exists():
     print(f"Внимание: папка {INPUT_DIR} не найдена. Создаю пустую.")
     INPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # Папка куда сохраняем нарезанные тайлы
-OUTPUT_DIR = Path("data/processed/tiles_800x800")
+OUTPUT_DIR = Path("data/processed/tiles_800x800_inference-300")
 
 # Параметры инференса
 TILE_SIZE = 800
@@ -19,8 +19,8 @@ STRIDE = 700
 
 # Константы масштабирования в зависимости от источника:
 DSLR_SCALE = 800 / 1200     # Для фото 5456х3632
-YANDEX_SCALE = 1.41          # Для фото 1920х1280 (не меняем)
-PHONE_SCALE = 1.0           # TODO: Вставь сюда нужный коэффициент, когда откалибруешь телефон (4096х3072)
+YANDEX_SCALE = 1.41         # Для фото 1920х1280 (не меняем)
+PHONE_SCALE = 1.0           
 
 def get_scale_factor(w, h):
     # Я.Панорамы имеют ширину около 1920

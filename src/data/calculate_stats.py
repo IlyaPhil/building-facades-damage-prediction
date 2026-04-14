@@ -4,7 +4,7 @@ import numpy as np
 from pathlib import Path
 
 BASE_DIR = Path("/home/neuralist/HSE_AI_master/master-thesis/building-facades-damage-prediction")
-TRAIN_MASKS_DIR = BASE_DIR / "data/processed/unified_dataset/masks/train"
+TRAIN_MASKS_DIR = BASE_DIR / "data/processed/tiles_800x800_408-imgs/masks/train"
 
 CLASS_NAMES = {
     0: "background",
